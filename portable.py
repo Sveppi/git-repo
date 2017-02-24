@@ -273,8 +273,7 @@ def RunWindowsPager(cmd):
   pager.active = True
 
 def NoPager(cmd):
-  if not isUnix():
-    RunWindowsShell(cmd)
+  return
 
 def RunWindowsShell(cmd):
   executable = _SelectCatenate(cmd.manifest.globalConfig)
